@@ -16,4 +16,6 @@ https://github.com/SharePoint/sp-dev-training-spfx-web-parts
 - `gulp serve --nobrowser` to run server locally and the open https://matiishyn.sharepoint.com/_layouts/15/Workbench.aspx
 - https://developer.microsoft.com/en-us/fabric#/styles/icons icons for your WebPart
 - `serveConfigurations` -> `pageUrl` to open Hosted Workbench automatically
-- Exercise 3: ???
+- `DisplayMode`, `Environment`, `EnvironmentType`
+- `Log.info`, `Log.warn`, `Log.error`, `Log.verbose`
+- loading - `this.context.statusRenderer.displayLoadingIndicator(this.domElement, "message");` -> `.clearLoadingIndicator(this.domElement);`

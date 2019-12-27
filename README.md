@@ -28,3 +28,12 @@ https://github.com/SharePoint/sp-dev-training-spfx-webpart-proppane
 - native controls in @microsoft/sp-webpart-base (https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/basics/integrate-with-property-pane#property-pane-fields, https://docs.microsoft.com/en-us/javascript/api/sp-webpart-base?view=sp-typescript-latest#functions)
 - additional controls from https://sharepoint.github.io/sp-dev-fx-property-controls/
 - [PropertyFieldPeoplePicker control](https://sharepoint.github.io/sp-dev-fx-property-controls/controls/PropertyFieldPeoplePicker/)
+
+## 4. SP Content
+
+https://github.com/SharePoint/sp-dev-training-spfx-spcontent
+
+- Using SPHttpClient to talk to SharePoint
+  - test
+- CRUD with SharePoint Data
+- Using Mocks to Simulate SharePoint Data

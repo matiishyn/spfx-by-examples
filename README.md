@@ -51,7 +51,5 @@ SharePoint Framework examples
 [doc](https://github.com/SharePoint/sp-dev-training-spfx-graph-3rdpartyapis)
 
 - [Calling Anonymous 3rd Party REST APIs](https://github.com/SharePoint/sp-dev-training-spfx-graph-3rdpartyapis/blob/master/Lab.md#exercise1)
-- [Calling Azure AD Secured 3rd Party REST APIs](Calling Anonymous 3rd Party REST APIs
-  Calling Azure AD Secured 3rd Party REST APIs
-  Working with the Microsoft Graph)
+- [Calling Azure AD Secured 3rd Party REST APIs](https://github.com/SharePoint/sp-dev-training-spfx-graph-3rdpartyapis/blob/master/Lab.md#exercise2)
 - [Working with the Microsoft Graph](https://github.com/SharePoint/sp-dev-training-spfx-graph-3rdpartyapis/blob/master/Lab.md#exercise3)

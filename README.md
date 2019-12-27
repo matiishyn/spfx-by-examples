@@ -11,7 +11,7 @@ https://github.com/SharePoint/sp-dev-training-spfx-getting-started
 https://github.com/SharePoint/sp-dev-training-spfx-web-parts
 
 - `yo @microsoft/sharepoint` and `npm i`
-- or `yo @microsoft/sharepoint --no-install` and `yarn init`
+- or `yo @microsoft/sharepoint --skip-install` and `yarn init`
 - `gulp serve` to run it locally
 - `gulp serve --nobrowser` to run server locally and the open https://matiishyn.sharepoint.com/_layouts/15/Workbench.aspx
 - https://developer.microsoft.com/en-us/fabric#/styles/icons icons for your WebPart
@@ -19,3 +19,7 @@ https://github.com/SharePoint/sp-dev-training-spfx-web-parts
 - `DisplayMode`, `Environment`, `EnvironmentType`
 - `Log.info`, `Log.warn`, `Log.error`, `Log.verbose`
 - loading - `this.context.statusRenderer.displayLoadingIndicator(this.domElement, "message");` -> `.clearLoadingIndicator(this.domElement);`
+
+## 4. Property Pane
+
+- default values in `*WebPart.manifest.json`

@@ -33,7 +33,7 @@ https://github.com/SharePoint/sp-dev-training-spfx-webpart-proppane
 
 https://github.com/SharePoint/sp-dev-training-spfx-spcontent
 
-- Using SPHttpClient to talk to SharePoint
+- [Using SPHttpClient to talk to SharePoint](https://github.com/SharePoint/sp-dev-training-spfx-spcontent/blob/master/Lab.md#exercise1)
   - test
 - CRUD with SharePoint Data
 - Using Mocks to Simulate SharePoint Data

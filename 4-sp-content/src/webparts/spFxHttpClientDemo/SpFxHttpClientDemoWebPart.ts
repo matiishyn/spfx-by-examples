@@ -127,7 +127,7 @@ export default class SpFxHttpClientDemoWebPart extends BaseClientSideWebPart<
     return this.context.spHttpClient
       .get(
         this.context.pageContext.web.absoluteUrl +
-          `/_api/web/lists/getbytitle('Countries')/items?$select=Id,Title&$filter=Title eq 'United States'`,
+          `/_api/web/lists/getbytitle('Countries')/items?$select=Id,Title&$filter=Id eq 1`,
         SPHttpClient.configurations.v1
       )
       .then(response => {
@@ -138,7 +138,7 @@ export default class SpFxHttpClientDemoWebPart extends BaseClientSideWebPart<
       })
       .then((listItem: ICountryListItem) => {
         // update item
-        listItem.Title = "USA";
+        listItem.Title = "USA" + Math.random();
         // save it
         const request: any = {};
         request.headers = {

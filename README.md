@@ -20,6 +20,11 @@ https://github.com/SharePoint/sp-dev-training-spfx-web-parts
 - `Log.info`, `Log.warn`, `Log.error`, `Log.verbose`
 - loading - `this.context.statusRenderer.displayLoadingIndicator(this.domElement, "message");` -> `.clearLoadingIndicator(this.domElement);`
 
-## 4. Property Pane
+## 3. Property Pane
+
+https://github.com/SharePoint/sp-dev-training-spfx-webpart-proppane
 
 - default values in `*WebPart.manifest.json`
+- native controls in @microsoft/sp-webpart-base (https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/basics/integrate-with-property-pane#property-pane-fields, https://docs.microsoft.com/en-us/javascript/api/sp-webpart-base?view=sp-typescript-latest#functions)
+- additional controls from https://sharepoint.github.io/sp-dev-fx-property-controls/
+- [PropertyFieldPeoplePicker control](https://sharepoint.github.io/sp-dev-fx-property-controls/controls/PropertyFieldPeoplePicker/)

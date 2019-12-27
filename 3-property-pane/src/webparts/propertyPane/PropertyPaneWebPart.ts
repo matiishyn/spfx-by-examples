@@ -13,11 +13,17 @@ import {
   PropertyPaneContinentSelector,
   IPropertyPaneContinentSelectorProps
 } from "../../controls/PropertyPaneContinentSelector";
+import {
+  IPropertyFieldGroupOrPerson,
+  PropertyFieldPeoplePicker,
+  PrincipalType
+} from "@pnp/spfx-property-controls/lib/PropertyFieldPeoplePicker";
 
 export interface IPropertyPaneWebPartProps {
   description: string;
   myContinent: string;
   numContinentsVisited: number;
+  people: IPropertyFieldGroupOrPerson[];
 }
 
 export default class PropertyPaneWebPart extends BaseClientSideWebPart<
@@ -43,6 +49,10 @@ export default class PropertyPaneWebPart extends BaseClientSideWebPart<
       this.properties.numContinentsVisited
     }</p>
 
+
+    <div class="selectedPeople">PEOPLE</div>
+
+
               <a href="https://aka.ms/spfx" class="${styles.button}">
                 <span class="${styles.label}">Learn more</span>
               </a>
@@ -50,6 +60,18 @@ export default class PropertyPaneWebPart extends BaseClientSideWebPart<
           </div>
         </div>
       </div>`;
+
+    if (this.properties.people && this.properties.people.length > 0) {
+      let peopleList: string = "";
+      this.properties.people.forEach(person => {
+        peopleList =
+          peopleList + `<li>${person.fullName} (${person.email})</li>`;
+      });
+
+      this.domElement.getElementsByClassName(
+        "selectedPeople"
+      )[0].innerHTML = `<ul>${peopleList}</ul>`;
+    }
   }
 
   protected get dataVersion(): Version {
@@ -113,6 +135,23 @@ export default class PropertyPaneWebPart extends BaseClientSideWebPart<
                   disabled: false,
                   selectedKey: this.properties.myContinent,
                   onPropertyChange: this.onContinentSelectionChange.bind(this)
+                }),
+                PropertyFieldPeoplePicker("people", {
+                  label:
+                    "Property Pane Field People Picker PnP Reusable Control",
+                  initialData: this.properties.people,
+                  allowDuplicate: false,
+                  principalType: [
+                    PrincipalType.Users,
+                    PrincipalType.SharePoint,
+                    PrincipalType.Security
+                  ],
+                  onPropertyChange: this.onPropertyPaneFieldChanged,
+                  context: this.context,
+                  properties: this.properties,
+                  onGetErrorMessage: null,
+                  deferredValidationTime: 0,
+                  key: "peopleFieldId"
                 })
               ]
             }
